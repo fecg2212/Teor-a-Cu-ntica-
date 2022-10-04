@@ -33,6 +33,16 @@ def prob(vec1, vec2):
     normas = n1 * n2
     return pro_int / normas
 
-
+def amplitud(v1, v2):
+    vec_conj1 = []
+    for i in range(len(v1)):
+        a = np.normaVector(v1[i])
+        vec_conj1.append(a)
+    vec_daga1 = np.array(vec_conj1)
+    vec_daga1 = np.array([vec_daga1])
+    vec_daga1 = (vec_daga1.T)
+    norma1 = np.dot(v1, vec_daga1)
+    norma1 = norma1.real
+    norma1 = math.sqrt(norma1)
 
 
